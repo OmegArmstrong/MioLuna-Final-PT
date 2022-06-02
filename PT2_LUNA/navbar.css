@@ -1,0 +1,400 @@
+ * {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%; }
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* Nav Bar */
+
+a:active{
+    background-color: black;
+    }
+    
+    .dropin{
+    z-index: 2;
+    }
+    
+    .wtm{
+        position: absolute;
+        background-color: yellow;
+        color: black;
+        font-family: Rubik;
+        font-size: 15px;
+        top: 110px;
+        width: 240px;
+        padding: 10px 10px 0px 20px;
+        font-weight: bold;
+    }
+    
+    #wtmspn1{
+        font-weight: bold;
+        color: red;
+    }
+    
+    #wtmspn2{
+        font-weight: bold;
+        color: blue;
+    }
+    
+    label.logo{
+        padding-left: 100px;
+        padding-top: 65px;
+        display: inline-block;
+        color: yellow;
+        font-size: 30px;
+        font-family: Rubik;
+    }
+    
+    .bglog{
+        z-index: 2;
+        top: 0px;
+        width: 400px;
+        position: fixed;
+        height: 120px;
+        background-color: navy;
+    }
+    
+    nav{
+        position: fixed;
+        z-index: 2;
+        width: 78%;
+        background-color: skyblue;
+        height: 120px;
+        font-family: Rubik;
+        animation: color-change 3s infinite alternate;
+    }
+    
+    .tater{
+        position: absolute;
+        top: -40px;
+        height: 150px;
+        padding-left: 20px;
+    }
+    
+    nav ul{
+        
+        position: relative;
+        margin-top: 0px;
+        list-style: none;
+        padding: 0px;
+        float: right;
+        margin-right: 80px;
+        text-transform: uppercase;
+    }
+    
+    nav ul li{
+        font-weight: bold;
+        float: left;
+        position: relative;    
+        list-style: none;
+        line-height: 120px;
+        width: 210px;
+        text-align: center;
+        font-size: 110%;
+        border-right: 3px solid black;
+    }
+    
+    nav ul li a{
+        text-decoration: none;
+        color: black;
+        display: block;
+        transition: color 0.4s, background-color 0.4s, text-decoration 0.4s, font-family 0.4s;
+    }
+    
+    nav ul li a:hover{
+        color: white;
+        background-color: red;
+        text-decoration: overline;
+        font-family: Rockwell;
+    }
+    
+    nav ul ul{
+        margin-top: 0px;
+        position: absolute;
+        display: none;
+        font-size: 75%;
+        transition: top 0.4s;
+    }
+    
+    nav ul li:hover > ul{
+        display: block;
+    }
+    
+    nav ul ul li{
+        font-weight: bold;
+        width: 210px;
+        line-height: 50px;
+        float:none;
+        position: relative;
+        display: list-item;
+        z-index: 2;
+        background-color: lime;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        border-right: 0px;
+    }
+    
+    nav ul ul ul li{
+        left: 210px;
+        line-height: 50px;
+        top: -50px;
+        z-index: 2;
+        font-size: 140%;
+        border-left: 2px solid red;
+        border-top: 1px solid red;
+        border-bottom: 1px solid red;
+        background-color: yellow;
+    }
+    
+    nav ul ul ul li a{
+        transition: background-color 0.4s;
+    }
+    
+    nav ul ul ul li a:hover{
+        background-color: blue;
+    }
+    
+    nav ul ul li a{
+        transition: background-color 0.4s;
+    }
+    
+    nav ul ul li a:hover{
+        background-color: indigo;
+    }
+    .mong{
+    left: -110px;
+    border-left: 2px solid black;
+    }
+    
+    .der{
+    border-left: 2px solid black;
+    left: 100px;
+    top: -416px;
+    }
+    
+    span{
+    color: red;
+    font-weight: bolder;
+    }
+    
+    @keyframes color-change {
+    
+    0% {
+    background-color: skyblue;
+    }
+    
+    33.33% {
+    background-color: yellow;
+    }
+    
+    66.66% {
+    background-color: lime;
+    }
+    
+    100% {
+    background-color: skyblue;
+    }
+    }
+    
+    /* fas fa bars*/
+    .checkbtn{
+    font-size: 35px;
+    color: black;
+    float: right;
+    margin-right: 50px;
+    cursor: pointer;
+    margin-top: 41px;
+    transition: color 0.4s;
+    display: none;
+    }
+    
+    .checkbtn:hover{
+    color: red;
+    }
+    
+    #check{
+    display: none;
+    }
+    
+    /*Media Resize*/
+    @media (max-width: 1520px){
+    .mong{
+        width: 170px;
+        left: -85px;
+    }
+    
+    .der{
+        width: 170px;
+        left: 85px;
+    }
+    
+    nav ul{
+        margin-right: 40px;
+    }
+    
+    nav ul ul li{
+        width: 160px;
+        font-size: 120%;
+    }
+    nav ul li{
+        width: 160px;
+        font-size: 90%;
+        float: left;
+        position: relative;
+    }
+    
+    nav ul ul ul li{
+        position: relative;
+        width: 165px;
+        left: 160px;
+        line-height: 50px;
+        top: -51px;
+        z-index: 2;
+        font-size: 130%;
+        border-left: 2px solid red;
+        border-top: 1px solid red;
+        border-bottom: 1px solid red;
+        background-color: yellow;
+        }
+    
+    label.logo{
+        padding-left: 100px;
+        padding-top: 65px;
+        display: inline-block;
+        color: yellow;
+        font-size: 30px;
+        font-family: Rubik;
+    }
+    
+    .bglog{
+        top: 0px;
+        width: 300px;
+        z-index: 2;
+        position: fixed;
+        height: 120px;
+        background-color: navy;
+    }
+    }
+    
+    @media (max-width: 1135px){
+    .checkbtn{
+        display: block;
+    }
+    
+    .mong{
+        width: 100%;
+        left: 40px;
+    }
+    
+    .der{
+        top: -52px;
+        width: 100%;
+        left: 40px;
+    }
+    
+    .bar{
+        position: absolute;
+        top: 120px; left: 0; right: 0;
+        background-color: royalblue;
+        width: 100%;
+        left: -100%;
+        transition: left 0.5s;
+        margin-right: 0px;
+        z-index: 2;
+    }
+
+    nav{
+        position: static;
+        width: 100%;
+    }
+    nav ul li{
+        width: 100%;
+        float: none;
+        display: block;
+        margin: auto;
+        margin-right: 0px;
+        font-size: 140%;
+    }
+
+    nav ul li ul{
+        position: relative;
+        width: 100%;
+        font-size: 70%;
+    }
+
+    nav ul li ul li{
+        width: 100%;
+        left: 40px;
+    }
+
+    nav ul li ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0px;
+        top: 52px;
+        float: none;
+        border-left: none;
+    }
+
+    nav ul li ul li ul li{
+        position: relative;
+        width: 100%;
+        left: 0px;
+    }
+    
+    label.logo{
+        padding-left: 100px;
+        padding-top: 65px;
+        display: inline-block;
+        color: yellow;
+        font-size: 30px;
+        font-family: Rubik;
+    }
+    
+    .bglog{
+        top: 0px;
+        width: 300px;
+        position: absolute;
+        z-index: 2;
+        height: 120px;
+        background-color: navy;
+    }
+    
+    #check:checked ~ .bar{
+        left: 0px;
+    }
+    }
+    
+    
+    @media (max-width: 670px){
+        label.logo{
+            padding-left: 100px;
+            padding-top: 65px;
+            display: inline-block;
+            color: yellow;
+            font-size: 30px;
+            font-family: Rubik;
+        }
+    }

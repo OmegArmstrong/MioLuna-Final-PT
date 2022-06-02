@@ -1,0 +1,801 @@
+*,
+*:before,
+*:after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url(wallpaper.png);
+}
+
+.cont-box {
+    transition: 0.2s;
+}
+
+.nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(0, 43, 0, 0.7);
+    animation: opener 1s;
+}
+
+
+@keyframes opener {
+    0% {
+        opacity: 0%;
+        top: -100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    100% {
+        opacity: 100%;
+        top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.nav li {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    float: left;
+    margin-right: 30px;
+    font-family: "Poppins";
+    font-size: 13pt;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 1pt;
+    text-shadow: 1px 1px 10px red;
+}
+
+.nav li a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+
+}
+
+.nav li a::after {
+    content: "";
+    display: block;
+    background-color: cyan;
+    height: 3px;
+    width: 0;
+    left: -4px;
+    bottom: -5px;
+    transition: 0.3s;
+    margin: auto;
+}
+
+.nav li a:hover:after {
+    width: 100%;
+    transition: width 0.3s;
+}
+
+.nav li a:hover {
+    background-color: black;
+    padding: 15px;
+    border-radius: 15px;
+    border: white 1.5px solid;
+    text-decoration: none;
+    color: yellow;
+    background-color: rgb(12, 12, 12);
+    text-shadow: 2px 2px 3px red;
+    box-shadow: 1px 1px 15px blue;
+}
+
+#dotes a {
+    color: cyan;
+}
+
+.nav #dotes a:hover {
+    font-size: 15pt;
+    padding: 10px;
+    font-weight: bold;
+    color: red;
+    background-color: yellow;
+    border: solid 3px black;
+    text-shadow: 2px 2px 5px lime;
+}
+
+#dotes a:after {
+    content: "";
+    display: block;
+    background-color: black;
+    height: 3px;
+    width: 0;
+    left: -4px;
+    bottom: -5px;
+    transition: 0.3s;
+    margin: auto;
+}
+
+.nav #dotes a:hover:after {
+    width: 100%;
+    transition: width 0.3s;
+}
+
+.menu {
+    display: flex;
+    margin-right: 20px;
+    animation: sliders1 4s;
+}
+
+@keyframes sliders1 {
+    0% {
+        display: flex;
+        position: absolute;
+        float: right;
+        opacity: 100%;
+        padding-left: 2500px;
+    }
+
+    100% {
+        display: flex;
+        position: absolute;
+        opacity: 100%;
+        padding-left: 750px;
+    }
+}
+
+.log {
+    display: flex;
+    width: 110px;
+    height: 150px;
+    margin-top: -10px;
+    margin-left: 3px;
+    align-items: center;
+    animation: spinstatic 7s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+.log:hover {
+    animation-play-state: paused;
+    animation: spinhover 2.5s ease infinite;
+    cursor: pointer;
+}
+
+@keyframes spinstatic {
+    from {
+        transform: rotateZ(0deg);
+        transform-origin: center;
+    }
+
+    to {
+        transform: rotateZ(360deg);
+        transform-origin: center;
+    }
+}
+
+@keyframes spinhover {
+    from {
+        transform: rotateZ(0deg);
+        transform: rotatey(0deg);
+        transform-origin: center;
+    }
+
+    to {
+        transform: rotateZ(0deg);
+        transform: rotatey(360deg);
+        transform-origin: center;
+    }
+}
+
+p.name {
+    font-family: "Bebas Neue";
+    font-weight: lighter;
+    font-size: 28pt;
+    color: white;
+    letter-spacing: 10px;
+    margin-left: 30px;
+    animation: namer 5s;
+    background-color: blue;
+    height: 150px;
+    padding: 50px 40px 0px 40px;
+    transition: 2s;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    transition: 0.3s;
+}
+
+p.name a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+p.name a:hover {
+    color: black;
+    text-shadow: 2px 2px 3px yellow;
+}
+
+@keyframes namer {
+    0% {
+        opacity: 0%;
+        font-size: 1px;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        position: relative;
+        font-size: 28pt;
+    }
+}
+
+.lset {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 30px;
+    animation: sliders2 4s;
+}
+
+@keyframes sliders2 {
+    0% {
+        position: absolute;
+        float: right;
+        opacity: 100%;
+        padding-right: 2500px;
+    }
+
+    100% {
+        position: absolute;
+        opacity: 100%;
+        padding-right: 850px;
+    }
+}
+
+.mainwrapper {
+    display: grid;
+    padding-bottom: 500px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 800px 800px 800px 800px 800px;
+    color: white;
+}
+
+.indivwrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.inwrap1 {
+    padding-top: 250px;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    animation-name: ref2;
+}
+
+@keyframes ref2 {
+    from {
+        opacity: 0%;
+
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.onwrap {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+
+.ico {
+    width: 200px;
+}
+
+#ABOUT {
+    background-image: url(aboutbg.jpg);
+    background-size: cover;
+    color: black;
+}
+
+#HOBBIES {
+    background-image: url(hobbiesbg.jfif);
+    background-size: cover;
+    color: black;
+}
+
+#FAVORITES {
+    background-image: url(favoritesbg.png);
+    background-size: cover;
+    background-repeat: repeat-y;
+    margin-top: -7px;
+    color: black;
+}
+
+#CONTACT {
+    background-image: url(contactsbg.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+    margin-top: -7px;
+    color: black;
+}
+
+
+.welcometext {
+    justify-content: center;
+    list-style-type: none;
+    padding: 20px;
+    font-family: "Poppins";
+    font-size: 25pt;
+    letter-spacing: 2pt;
+    color: black;
+    background-color: yellow;
+    margin-left: 20px;
+    margin-top: 40px;
+    border-radius: 15px;
+    border: 5px solid red;
+    width: 81%;
+    margin-right: 50px;
+    animation: ease 3s;
+    animation-name: welcometext;
+}
+
+@keyframes welcometext {
+    from {
+        font-size: 0pt;
+        width: 0%;
+        border: none;
+        background-color: transparent;
+    }
+
+    to {
+        font-size: 25pt;
+        width: 81%;
+        border-radius: 15px;
+        border: 5px solid red;
+        background-color: yellow;
+    }
+}
+
+.welcimg {
+    max-width: 50%;
+    height: 200px;
+    padding-left: 50px;
+    animation: ease 2s;
+    animation-name: welcomeimg;
+}
+
+@keyframes welcomeimg {
+    from {
+        max-width: 0%;
+        height: 0px;
+    }
+
+    to {
+        max-width: 50%;
+        height: 200px;
+    }
+}
+
+.aboutlogo2 {
+    max-width: 150%;
+    height: 250px;
+    transition: 0.3s;
+}
+
+.aboutheader {
+    padding-left: 20%;
+    margin-top: 20px;
+    font-family: 'Bebas Neue';
+    font-size: 45pt;
+    letter-spacing: 3pt;
+    color: blue;
+    transition: 0.3s;
+}
+
+.abouttext {
+    padding-left: 20%;
+    margin-right: 130px;
+    font-size: 17pt;
+    font-family: "Futura PT";
+    list-style: none;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.hobbieslogo2 {
+    max-width: 130%;
+    height: 200px;
+    margin: 0;
+    transition: 0.3s;
+}
+
+.hobbiesheader {
+    margin-top: 20px;
+    padding-left: 20%;
+    font-family: 'Bebas Neue';
+    font-size: 45pt;
+    letter-spacing: 5pt;
+    color: rgb(133, 64, 0);
+    transition: 0.3s;
+}
+
+.hobbiestext {
+    padding-left: 20%;
+    margin-right: 130px;
+    font-size: 17pt;
+    font-family: "Futura PT";
+    list-style: none;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.favoriteslogo2 {
+    max-width: 500%;
+    height: 200px;
+    transition: 0.3s;
+}
+
+.favoritesheader {
+    margin-top: 20px;
+    padding-left: 20%;
+    font-family: 'Bebas Neue';
+    font-size: 45pt;
+    letter-spacing: 5pt;
+    color: rgb(10, 0, 78);
+    transition: 0.3s;
+}
+
+.favoritestext {
+    padding-left: 20%;
+    margin-right: 130px;
+    font-size: 17pt;
+    font-family: "Futura PT";
+    list-style: none;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.contactheader {
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: 'Bebas Neue';
+    font-size: 60pt;
+    letter-spacing: 5pt;
+    color: rgb(255, 0, 0);
+}
+
+.contacttext {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 45pt;
+    font-family: "Futura PT";
+    list-style: none;
+    margin-top: -50px;
+    letter-spacing: 3vw;
+    background-color: white;
+    border-radius: 25px;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 0;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.contacttext a {
+    color: black;
+    transition: 0.3s;
+}
+
+#FB,
+#YT,
+#DC,
+#STM,
+#STF {
+    transition: 0.3s;
+}
+
+#FB:hover,
+#YT:hover,
+#DC:hover,
+#STM:hover,
+#STF:hover {
+    transition: 0.3s;
+    font-size: 60pt;
+}
+
+#FB:hover {
+    color: rgb(4, 0, 243);
+}
+
+#YT:hover {
+    color: red;
+}
+
+#DC:hover {
+    color: rgb(75, 87, 253);
+}
+
+#STM:hover {
+    color: rgb(255, 94, 0);
+}
+
+#STF:hover {
+    color: rgb(3, 85, 0);
+}
+
+.contactlabel {
+    font-family: "Bebas Neue";
+    font-size: 35pt;
+    list-style: none;
+    margin-top: 30px;
+    text-align: center;
+    background-color: yellow;
+    justify-content: space-between;
+    word-spacing: 5vw;
+    width: 100%;
+
+}
+
+.contactwrapper {
+    width: 100%;
+}
+
+@keyframes logospin {
+    from {
+        transform: rotateZ(0);
+    }
+
+    to {
+        transform: rotateZ(360);
+    }
+}
+
+.toggler,
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 1120px) {
+    p.name {
+        font-size: 20pt;
+        padding: 40px 20px 0px 20px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    p.name {
+        font-size: 20pt;
+        padding: 40px 20px 0px 20px;
+    }
+}
+
+@media screen and (max-width: 1059px) {
+    p.name {
+        font-size: 20pt;
+        padding: 50px 20px 0px 20px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .menu {
+        opacity: 100%;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        position: fixed;
+        top: 150px;
+        right: -400px;
+        background-color: rgba(5, 0, 73, 0.8);
+        width: 40%;
+        height: 80%;
+        color: white;
+        padding-left: 40px;
+        padding-bottom: 170px;
+        margin: 0px;
+        transition: ease 0.5s;
+    }
+
+    .nav li {
+        margin-top: 40px;
+        padding: 0px;
+    }
+
+    .nav li a:hover {
+        background-color: black;
+        padding: 10px 50px 10px 50px;
+        border-radius: 15px;
+        border: white 1.5px solid;
+        text-decoration: none;
+        color: yellow;
+        background-color: rgb(12, 12, 12);
+        text-shadow: 2px 2px 3px red;
+        box-shadow: 1px 1px 15px blue;
+    }
+
+    .nav #dotes a:hover {
+        font-size: 15pt;
+        padding: 10px 50px 10px 50px;
+        font-weight: bold;
+        color: red;
+        background-color: yellow;
+        border: solid 3px black;
+        text-shadow: 2px 2px 5px lime;
+    }
+
+    .toggler:checked~.menu {
+        opacity: 100%;
+        right: 0px;
+    }
+
+    .burger {
+        display: block;
+        font-weight: bold;
+        font-size: 50px;
+        padding: 20px;
+        color: yellow;
+        transition: 0.3s;
+    }
+
+    .burger:hover {
+        color: red;
+    }
+
+    .favoritesheader,
+    .aboutheader,
+    .hobbiesheader {
+        font-size: 30pt;
+        transition: 0.3s;
+    }
+
+    .favoritestext,
+    .abouttext,
+    .hobbiestext {
+        font-size: 14pt;
+        transition: 0.3s;
+    }
+
+    .contacttext {
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 45pt;
+        font-family: "Futura PT";
+        list-style: none;
+        margin-top: -50px;
+        letter-spacing: 3vw;
+        background-color: white;
+        border-radius: 25px;
+        padding: 20px;
+        width: 80%;
+        margin: auto;
+        margin-top: 0;
+        justify-content: center;
+        transition: 0.3s;
+    }
+
+    .contactheader {
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 20px;
+        font-family: 'Bebas Neue';
+        font-size: 30pt;
+        letter-spacing: 5pt;
+        color: rgb(255, 0, 0);
+    }
+
+    .contacttext {
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 25pt;
+        font-family: "Futura PT";
+        list-style: none;
+        margin-top: -50px;
+        letter-spacing: 3vw;
+        background-color: white;
+        border-radius: 25px;
+        padding: 20px;
+        width: 100%;
+        margin: auto;
+        margin-top: 0;
+        justify-content: center;
+        transition: 0.3s;
+    }
+
+    .contacttext a {
+        color: black;
+        transition: 0.3s;
+    }
+
+    #FB,
+    #YT,
+    #DC,
+    #STM,
+    #STF {
+        transition: 0.3s;
+    }
+
+    #FB:hover,
+    #YT:hover,
+    #DC:hover,
+    #STM:hover,
+    #STF:hover {
+        transition: 0.3s;
+        font-size: 40pt;
+    }
+
+    #FB:hover {
+        color: rgb(4, 0, 243);
+    }
+
+    #YT:hover {
+        color: red;
+    }
+
+    #DC:hover {
+        color: rgb(75, 87, 253);
+    }
+
+    #STM:hover {
+        color: rgb(255, 94, 0);
+    }
+
+    #STF:hover {
+        color: rgb(3, 85, 0);
+    }
+
+    .contactlabel {
+        font-family: "Bebas Neue";
+        font-size: 15pt;
+        list-style: none;
+        margin-top: 30px;
+        text-align: center;
+        background-color: yellow;
+        justify-content: space-between;
+        word-spacing: 5vw;
+        width: 100%;
+
+    }
+
+    .contactwrapper {
+        width: 100%;
+    }
+
+    @keyframes logospin {
+        from {
+            transform: rotateZ(0);
+        }
+
+        to {
+            transform: rotateZ(360);
+        }
+    }
+}
+
+@media screen and (max-width: 628px) {
+    .welcometext {
+        font-size: 15pt;
+    }
+}
+
+@media screen and (max-height: 480px) {
+    body {
+        overflow: auto;
+    }
+}
