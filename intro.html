@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro - PT1-4_Luna</title>
+</head>
+<style>
+    *,
+    *:before,
+    *:after {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Righteous";
+    }
+
+    body {
+        background-image: url(/PT1-4_LUNA/introwallpaper.png);
+        background-repeat: repeat;
+    }
+
+    .container {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container span {
+        text-transform: uppercase;
+        display: block;
+    }
+
+    .text1 {
+        color: white;
+        font-size: 60px;
+        font-weight: 600;
+        letter-spacing: 20px;
+        margin-bottom: 15px;
+        background: black;
+        position: relative;
+        animation: text 3s 1;
+    }
+
+    .text2 {
+        font-size: 50px;
+        color: cyan;
+        font-weight: 600;
+        letter-spacing: 6px;
+        margin-bottom: 20px;
+        background: black;
+        width: 100%;
+    }
+
+    .text3 {
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 6px;
+        margin-bottom: 20px;
+        background: black;
+        width: 100%;
+        font-family: "Righteous";
+    }
+
+    .text3 a {
+        color: yellow;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 6px;
+        margin-bottom: 20px;
+        background: black;
+        width: 105%;
+        animation: link 6s 1;
+    }
+
+    .text3 a::after {
+        content: "";
+        display: block;
+        background-color: green;
+        height: 3px;
+        width: 0;
+        left: -4px;
+        bottom: -20px;
+        transition: 1s;
+        margin: auto;
+    }
+
+    .text3 a:hover:after {
+        width: 77%;
+        transition: width 0.3s;
+    }
+
+    @keyframes text {
+        0% {
+            color: black;
+            margin-bottom: -60px;
+        }
+
+        30% {
+            letter-spacing: 30px;
+            margin-bottom: -60px;
+        }
+
+        45% {
+            letter-spacing: 20px;
+            margin-bottom: -60px;
+        }
+    }
+
+    @keyframes link {
+        0% {
+            color: black;
+            margin-bottom: -60px;
+        }
+
+        30% {
+            color: black;
+            letter-spacing: 20px;
+            margin-bottom: -60px;
+        }
+
+        45% {
+            color: yellow;
+            letter-spacing: 10px;
+            margin-bottom: -60px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <span class="text1">Welcome to</span>
+        <span class="text2">Mio's Website</span>
+        <span class="text3"><a href="/PT1-4_LUNA/index.html">Click Here to Proceed</a></span>
+    </div>
+
+    <p class="text3"></p>
+</body>
+
+</html>
